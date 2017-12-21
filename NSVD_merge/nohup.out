@@ -1,0 +1,1697 @@
+rm: cannot remove `sample1.txt.zip': No such file or directory
+rm: cannot remove `sample1.txt': No such file or directory
+rm Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o  SVDBiasPredictor_update.o SVDBiasPredictor_data.o demo 
+rm: cannot remove `Predictor_data.o': No such file or directory
+rm: cannot remove `Predictor_train.o': No such file or directory
+rm: cannot remove `Predictor_test.o': No such file or directory
+rm: cannot remove `SGD.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_init.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_update.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_data.o': No such file or directory
+rm: cannot remove `demo': No such file or directory
+make: *** [clean] Error 1
+g++ -Wall -O3 -msse2   -c -o Predictor_data.o Predictor_data.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_train.o Predictor_train.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_test.o Predictor_test.cpp
+g++ -Wall -O3 -msse2   -c -o SGD.o SGD.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_init.o SVDBiasPredictor_init.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_update.o SVDBiasPredictor_update.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_data.o SVDBiasPredictor_data.cpp
+g++ -Wall -O3 -msse2 -lpthread -lm -o demo CF_main.cpp Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o SVDBiasPredictor_update.o SVDBiasPredictor_data.o
+start SVDBiasPredictor
+start to load items: ../../data/pig/item.txt
+load items finished, size: 6095
+start to load users: ../../data/pig/user_profile.txt
+processed 1000000 lines
+processed 2000000 lines
+load users finished, size: 2320895
+start to load data: ../../data/pig_mid/session_train.6.txt
+processed 1000000 lines, 182192 positive, 817808 negative
+processed 2000000 lines, 364128 positive, 1635872 negative
+processed 3000000 lines, 545923 positive, 2454077 negative
+processed 4000000 lines, 727186 positive, 3272814 negative
+processed 5000000 lines, 909215 positive, 4090785 negative
+processed 6000000 lines, 1091582 positive, 4908418 negative
+processed 7000000 lines, 1272809 positive, 5727191 negative
+processed 8000000 lines, 1454080 positive, 6545920 negative
+processed 9000000 lines, 1635305 positive, 7364695 negative
+processed 10000000 lines, 1817278 positive, 8182722 negative
+processed 11000000 lines, 1998820 positive, 9001180 negative
+processed 12000000 lines, 2180716 positive, 9819284 negative
+processed 13000000 lines, 2362414 positive, 10637586 negative
+processed 14000000 lines, 2544116 positive, 11455884 negative
+processed 15000000 lines, 2725964 positive, 12274036 negative
+processed 16000000 lines, 2908427 positive, 13091573 negative
+processed 17000000 lines, 3089818 positive, 13910182 negative
+processed 18000000 lines, 3271052 positive, 14728948 negative
+processed 19000000 lines, 3452487 positive, 15547513 negative
+processed 20000000 lines, 3633962 positive, 16366038 negative
+load finished, get training log lines: 20857086
+start to load data: ../../data/pig_mid/sns.2.txt
+processed 1000000 lines
+processed 2000000 lines
+processed 3000000 lines
+processed 4000000 lines
+processed 5000000 lines
+processed 6000000 lines
+processed 7000000 lines
+processed 8000000 lines
+processed 9000000 lines
+processed 10000000 lines
+processed 11000000 lines
+processed 12000000 lines
+processed 13000000 lines
+processed 14000000 lines
+processed 15000000 lines
+processed 16000000 lines
+processed 17000000 lines
+processed 18000000 lines
+processed 19000000 lines
+processed 20000000 lines
+processed 21000000 lines
+processed 22000000 lines
+processed 23000000 lines
+processed 24000000 lines
+processed 25000000 lines
+processed 26000000 lines
+processed 27000000 lines
+processed 28000000 lines
+processed 29000000 lines
+processed 30000000 lines
+processed 31000000 lines
+processed 32000000 lines
+processed 33000000 lines
+processed 34000000 lines
+processed 35000000 lines
+processed 36000000 lines
+processed 37000000 lines
+processed 38000000 lines
+processed 39000000 lines
+processed 40000000 lines
+processed 41000000 lines
+processed 42000000 lines
+processed 43000000 lines
+processed 44000000 lines
+load finished, get training log lines: 44427963
+start to initialize Bu Bi
+init Bu Bi finished, mu:0.181716
+start to initialize UV, u_0:0.050000
+start to initialize user->items
+after train log, 1302011 users have items
+after sns log, 1794404 users have items
+start gradient descent
+start to train, alpha:0.002000, lambda:0.004000
+after training, sum_rmse:427889.843750, size:3792731
+start validation
+after validation, sum_rmse:416219.531250, size:3792341
+iter: 0 training RMSE: 0.335885 validation RMSE: 0.331289, time=224.89
+start to train, alpha:0.001980, lambda:0.004000
+after training, sum_rmse:-nan, size:3790502
+start validation
+after validation, sum_rmse:-nan, size:3792342
+iter: 1 training RMSE: -nan validation RMSE: -nan, time=228.59
+start to train, alpha:0.001960, lambda:0.004000
+after training, sum_rmse:-nan, size:3792859
+start validation
+after validation, sum_rmse:-nan, size:3793168
+iter: 2 training RMSE: -nan validation RMSE: -nan, time=230.28
+start to train, alpha:0.001941, lambda:0.004000
+after training, sum_rmse:-nan, size:3793314
+start validation
+after validation, sum_rmse:-nan, size:3790949
+iter: 3 training RMSE: -nan validation RMSE: -nan, time=230.59
+start to train, alpha:0.001921, lambda:0.004000
+after training, sum_rmse:-nan, size:3792688
+start validation
+after validation, sum_rmse:-nan, size:3790875
+iter: 4 training RMSE: -nan validation RMSE: -nan, time=229.38
+start to train, alpha:0.001902, lambda:0.004000
+after training, sum_rmse:-nan, size:3792294
+start validation
+after validation, sum_rmse:-nan, size:3792392
+iter: 5 training RMSE: -nan validation RMSE: -nan, time=229.84
+start to train, alpha:0.001883, lambda:0.004000
+after training, sum_rmse:-nan, size:3792861
+start validation
+after validation, sum_rmse:-nan, size:3793288
+iter: 6 training RMSE: -nan validation RMSE: -nan, time=230.45
+start to train, alpha:0.001864, lambda:0.004000
+after training, sum_rmse:-nan, size:3792723
+start validation
+after validation, sum_rmse:-nan, size:3792477
+iter: 7 training RMSE: -nan validation RMSE: -nan, time=230.16
+start to train, alpha:0.001845, lambda:0.004000
+after training, sum_rmse:-nan, size:3791621
+start validation
+after validation, sum_rmse:-nan, size:3791691
+iter: 8 training RMSE: -nan validation RMSE: -nan, time=229.18
+start to train, alpha:0.001827, lambda:0.004000
+after training, sum_rmse:-nan, size:3793159
+start validation
+after validation, sum_rmse:-nan, size:3792602
+iter: 9 training RMSE: -nan validation RMSE: -nan, time=230.11
+start to train, alpha:0.001809, lambda:0.004000
+after training, sum_rmse:-nan, size:3791041
+start validation
+after validation, sum_rmse:-nan, size:3792639
+iter: 10 training RMSE: -nan validation RMSE: -nan, time=230.66
+start to train, alpha:0.001791, lambda:0.004000
+after training, sum_rmse:-nan, size:3795026
+start validation
+after validation, sum_rmse:-nan, size:3791843
+iter: 11 training RMSE: -nan validation RMSE: -nan, time=229.62
+start to train, alpha:0.001773, lambda:0.004000
+after training, sum_rmse:-nan, size:3792054
+start validation
+after validation, sum_rmse:-nan, size:3792706
+iter: 12 training RMSE: -nan validation RMSE: -nan, time=229.61
+start to train, alpha:0.001755, lambda:0.004000
+after training, sum_rmse:-nan, size:3790695
+start validation
+after validation, sum_rmse:-nan, size:3791824
+iter: 13 training RMSE: -nan validation RMSE: -nan, time=230.18
+start to train, alpha:0.001737, lambda:0.004000
+after training, sum_rmse:-nan, size:3791355
+start validation
+after validation, sum_rmse:-nan, size:3792207
+iter: 14 training RMSE: -nan validation RMSE: -nan, time=230.31
+start to train, alpha:0.001720, lambda:0.004000
+after training, sum_rmse:-nan, size:3792419
+start validation
+after validation, sum_rmse:-nan, size:3792946
+iter: 15 training RMSE: -nan validation RMSE: -nan, time=229.31
+start to train, alpha:0.001703, lambda:0.004000
+after training, sum_rmse:-nan, size:3792475
+start validation
+after validation, sum_rmse:-nan, size:3792055
+iter: 16 training RMSE: -nan validation RMSE: -nan, time=230.46
+start to train, alpha:0.001686, lambda:0.004000
+after training, sum_rmse:-nan, size:3791101
+start validation
+after validation, sum_rmse:-nan, size:3790473
+iter: 17 training RMSE: -nan validation RMSE: -nan, time=230.51
+start to train, alpha:0.001669, lambda:0.004000
+after training, sum_rmse:-nan, size:3792159
+start validation
+after validation, sum_rmse:-nan, size:3793988
+iter: 18 training RMSE: -nan validation RMSE: -nan, time=229.75
+start to train, alpha:0.001652, lambda:0.004000
+after training, sum_rmse:-nan, size:3793020
+start validation
+after validation, sum_rmse:-nan, size:3790334
+iter: 19 training RMSE: -nan validation RMSE: -nan, time=229.48
+start to train, alpha:0.001636, lambda:0.004000
+after training, sum_rmse:-nan, size:3793372
+start validation
+after validation, sum_rmse:-nan, size:3791935
+iter: 20 training RMSE: -nan validation RMSE: -nan, time=230.59
+start to train, alpha:0.001619, lambda:0.004000
+after training, sum_rmse:-nan, size:3791902
+start validation
+after validation, sum_rmse:-nan, size:3790050
+iter: 21 training RMSE: -nan validation RMSE: -nan, time=230.3
+start to train, alpha:0.001603, lambda:0.004000
+after training, sum_rmse:-nan, size:3792863
+start validation
+after validation, sum_rmse:-nan, size:3792735
+iter: 22 training RMSE: -nan validation RMSE: -nan, time=229.34
+start to train, alpha:0.001587, lambda:0.004000
+after training, sum_rmse:-nan, size:3790241
+start validation
+after validation, sum_rmse:-nan, size:3793448
+iter: 23 training RMSE: -nan validation RMSE: -nan, time=230.04
+start to train, alpha:0.001571, lambda:0.004000
+after training, sum_rmse:-nan, size:3792528
+start validation
+after validation, sum_rmse:-nan, size:3790689
+iter: 24 training RMSE: -nan validation RMSE: -nan, time=230.69
+start to train, alpha:0.001556, lambda:0.004000
+after training, sum_rmse:-nan, size:3792408
+start validation
+after validation, sum_rmse:-nan, size:3791160
+iter: 25 training RMSE: -nan validation RMSE: -nan, time=229.48
+start to train, alpha:0.001540, lambda:0.004000
+after training, sum_rmse:-nan, size:3792284
+start validation
+after validation, sum_rmse:-nan, size:3792487
+iter: 26 training RMSE: -nan validation RMSE: -nan, time=228.4
+start to train, alpha:0.001525, lambda:0.004000
+after training, sum_rmse:-nan, size:3792776
+start validation
+after validation, sum_rmse:-nan, size:3791563
+iter: 27 training RMSE: -nan validation RMSE: -nan, time=220.08
+start to train, alpha:0.001509, lambda:0.004000
+after training, sum_rmse:-nan, size:3791768
+start validation
+after validation, sum_rmse:-nan, size:3790792
+iter: 28 training RMSE: -nan validation RMSE: -nan, time=225.34
+start to train, alpha:0.001494, lambda:0.004000
+after training, sum_rmse:-nan, size:3791954
+start validation
+after validation, sum_rmse:-nan, size:3790145
+iter: 29 training RMSE: -nan validation RMSE: -nan, time=218.35
+start to train, alpha:0.001479, lambda:0.004000
+after training, sum_rmse:-nan, size:3790039
+start validation
+after validation, sum_rmse:-nan, size:3793085
+iter: 30 training RMSE: -nan validation RMSE: -nan, time=218.24
+start to train, alpha:0.001465, lambda:0.004000
+after training, sum_rmse:-nan, size:3791439
+start validation
+after validation, sum_rmse:-nan, size:3791549
+iter: 31 training RMSE: -nan validation RMSE: -nan, time=218.17
+start to train, alpha:0.001450, lambda:0.004000
+after training, sum_rmse:-nan, size:3792660
+start validation
+after validation, sum_rmse:-nan, size:3789070
+iter: 32 training RMSE: -nan validation RMSE: -nan, time=218.42
+start to train, alpha:0.001435, lambda:0.004000
+after training, sum_rmse:-nan, size:3790559
+start validation
+after validation, sum_rmse:-nan, size:3792766
+iter: 33 training RMSE: -nan validation RMSE: -nan, time=218.55
+start to train, alpha:0.001421, lambda:0.004000
+after training, sum_rmse:-nan, size:3791581
+start validation
+after validation, sum_rmse:-nan, size:3792868
+iter: 34 training RMSE: -nan validation RMSE: -nan, time=218.57
+start to train, alpha:0.001407, lambda:0.004000
+after training, sum_rmse:-nan, size:3792020
+start validation
+after validation, sum_rmse:-nan, size:3792266
+iter: 35 training RMSE: -nan validation RMSE: -nan, time=218.51
+start to train, alpha:0.001393, lambda:0.004000
+after training, sum_rmse:-nan, size:3792394
+start validation
+after validation, sum_rmse:-nan, size:3792087
+iter: 36 training RMSE: -nan validation RMSE: -nan, time=218.23
+start to train, alpha:0.001379, lambda:0.004000
+after training, sum_rmse:-nan, size:3792658
+start validation
+after validation, sum_rmse:-nan, size:3791937
+iter: 37 training RMSE: -nan validation RMSE: -nan, time=218.48
+start to train, alpha:0.001365, lambda:0.004000
+after training, sum_rmse:-nan, size:3792848
+start validation
+after validation, sum_rmse:-nan, size:3793063
+iter: 38 training RMSE: -nan validation RMSE: -nan, time=218.26
+start to train, alpha:0.001351, lambda:0.004000
+after training, sum_rmse:-nan, size:3792286
+start validation
+after validation, sum_rmse:-nan, size:3792676
+iter: 39 training RMSE: -nan validation RMSE: -nan, time=218.37
+start to train, alpha:0.001338, lambda:0.004000
+after training, sum_rmse:-nan, size:3793795
+start validation
+after validation, sum_rmse:-nan, size:3790543
+iter: 40 training RMSE: -nan validation RMSE: -nan, time=218.49
+start to train, alpha:0.001325, lambda:0.004000
+after training, sum_rmse:-nan, size:3792549
+start validation
+after validation, sum_rmse:-nan, size:3791696
+iter: 41 training RMSE: -nan validation RMSE: -nan, time=218.2
+start to train, alpha:0.001311, lambda:0.004000
+after training, sum_rmse:-nan, size:3792394
+start validation
+after validation, sum_rmse:-nan, size:3793464
+iter: 42 training RMSE: -nan validation RMSE: -nan, time=218.37
+start to train, alpha:0.001298, lambda:0.004000
+after training, sum_rmse:-nan, size:3791955
+start validation
+after validation, sum_rmse:-nan, size:3794614
+iter: 43 training RMSE: -nan validation RMSE: -nan, time=218.35
+start to train, alpha:0.001285, lambda:0.004000
+after training, sum_rmse:-nan, size:3792060
+start validation
+after validation, sum_rmse:-nan, size:3790854
+iter: 44 training RMSE: -nan validation RMSE: -nan, time=218.38
+start to train, alpha:0.001272, lambda:0.004000
+after training, sum_rmse:-nan, size:3791295
+start validation
+after validation, sum_rmse:-nan, size:3793213
+iter: 45 training RMSE: -nan validation RMSE: -nan, time=218.39
+start to train, alpha:0.001260, lambda:0.004000
+after training, sum_rmse:-nan, size:3790434
+start validation
+after validation, sum_rmse:-nan, size:3793003
+iter: 46 training RMSE: -nan validation RMSE: -nan, time=218.29
+start to train, alpha:0.001247, lambda:0.004000
+after training, sum_rmse:-nan, size:3792389
+start validation
+after validation, sum_rmse:-nan, size:3791453
+iter: 47 training RMSE: -nan validation RMSE: -nan, time=218.44
+start to train, alpha:0.001235, lambda:0.004000
+after training, sum_rmse:-nan, size:3793015
+start validation
+after validation, sum_rmse:-nan, size:3793834
+iter: 48 training RMSE: -nan validation RMSE: -nan, time=218.36
+start to train, alpha:0.001222, lambda:0.004000
+after training, sum_rmse:-nan, size:3793097
+start validation
+after validation, sum_rmse:-nan, size:3792089
+iter: 49 training RMSE: -nan validation RMSE: -nan, time=218.53
+start to train, alpha:0.001210, lambda:0.004000
+after training, sum_rmse:-nan, size:3795488
+start validation
+after validation, sum_rmse:-nan, size:3792261
+iter: 50 training RMSE: -nan validation RMSE: -nan, time=218.38
+start to train, alpha:0.001198, lambda:0.004000
+after training, sum_rmse:-nan, size:3793535
+start validation
+after validation, sum_rmse:-nan, size:3792192
+iter: 51 training RMSE: -nan validation RMSE: -nan, time=218.47
+start to train, alpha:0.001186, lambda:0.004000
+after training, sum_rmse:-nan, size:3793284
+start validation
+after validation, sum_rmse:-nan, size:3791857
+iter: 52 training RMSE: -nan validation RMSE: -nan, time=218.31
+start to train, alpha:0.001174, lambda:0.004000
+after training, sum_rmse:-nan, size:3793031
+start validation
+after validation, sum_rmse:-nan, size:3794032
+iter: 53 training RMSE: -nan validation RMSE: -nan, time=218.4
+start to train, alpha:0.001162, lambda:0.004000
+after training, sum_rmse:-nan, size:3793251
+start validation
+after validation, sum_rmse:-nan, size:3792712
+iter: 54 training RMSE: -nan validation RMSE: -nan, time=218.28
+start to train, alpha:0.001151, lambda:0.004000
+after training, sum_rmse:-nan, size:3791835
+start validation
+after validation, sum_rmse:-nan, size:3791119
+iter: 55 training RMSE: -nan validation RMSE: -nan, time=218.18
+start to train, alpha:0.001139, lambda:0.004000
+after training, sum_rmse:-nan, size:3793017
+start validation
+after validation, sum_rmse:-nan, size:3791796
+iter: 56 training RMSE: -nan validation RMSE: -nan, time=218.45
+start to train, alpha:0.001128, lambda:0.004000
+after training, sum_rmse:-nan, size:3791791
+start validation
+after validation, sum_rmse:-nan, size:3792314
+iter: 57 training RMSE: -nan validation RMSE: -nan, time=218.42
+start to train, alpha:0.001117, lambda:0.004000
+after training, sum_rmse:-nan, size:3793237
+start validation
+after validation, sum_rmse:-nan, size:3791316
+iter: 58 training RMSE: -nan validation RMSE: -nan, time=218.49
+start to train, alpha:0.001105, lambda:0.004000
+after training, sum_rmse:-nan, size:3792200
+start validation
+after validation, sum_rmse:-nan, size:3792338
+iter: 59 training RMSE: -nan validation RMSE: -nan, time=218.38
+gradient descent is finished
+start to test
+processed 100000 lines
+processed 200000 lines
+processed 300000 lines
+processed 400000 lines
+processed 500000 lines
+processed 600000 lines
+processed 700000 lines
+processed 800000 lines
+processed 900000 lines
+processed 1000000 lines
+processed 1100000 lines
+processed 1200000 lines
+processed 1300000 lines
+  adding: sample1.txt (deflated 75%)
+rm Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o  SVDBiasPredictor_update.o SVDBiasPredictor_data.o demo 
+g++ -Wall -O3 -msse2   -c -o Predictor_data.o Predictor_data.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_train.o Predictor_train.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_test.o Predictor_test.cpp
+g++ -Wall -O3 -msse2   -c -o SGD.o SGD.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_init.o SVDBiasPredictor_init.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_update.o SVDBiasPredictor_update.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_data.o SVDBiasPredictor_data.cpp
+g++ -Wall -O3 -msse2 -lpthread -lm -o demo CF_main.cpp Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o SVDBiasPredictor_update.o SVDBiasPredictor_data.o
+start SVDBiasPredictor
+start to load items: ../../data/pig/item.txt
+load items finished, size: 6095
+start to load users: ../../data/pig/user_profile.txt
+processed 1000000 lines
+processed 2000000 lines
+load users finished, size: 2320895
+start to load data: ../../data/pig_mid/session_train.6.txt
+processed 1000000 lines, 182192 positive, 817808 negative
+processed 2000000 lines, 364128 positive, 1635872 negative
+processed 3000000 lines, 545923 positive, 2454077 negative
+processed 4000000 lines, 727186 positive, 3272814 negative
+processed 5000000 lines, 909215 positive, 4090785 negative
+processed 6000000 lines, 1091582 positive, 4908418 negative
+processed 7000000 lines, 1272809 positive, 5727191 negative
+processed 8000000 lines, 1454080 positive, 6545920 negative
+processed 9000000 lines, 1635305 positive, 7364695 negative
+processed 10000000 lines, 1817278 positive, 8182722 negative
+processed 11000000 lines, 1998820 positive, 9001180 negative
+processed 12000000 lines, 2180716 positive, 9819284 negative
+processed 13000000 lines, 2362414 positive, 10637586 negative
+processed 14000000 lines, 2544116 positive, 11455884 negative
+processed 15000000 lines, 2725964 positive, 12274036 negative
+processed 16000000 lines, 2908427 positive, 13091573 negative
+processed 17000000 lines, 3089818 positive, 13910182 negative
+processed 18000000 lines, 3271052 positive, 14728948 negative
+processed 19000000 lines, 3452487 positive, 15547513 negative
+processed 20000000 lines, 3633962 positive, 16366038 negative
+load finished, get training log lines: 20857086
+start to load data: ../../data/pig_mid/sns.2.txt
+processed 1000000 lines
+processed 2000000 lines
+processed 3000000 lines
+processed 4000000 lines
+processed 5000000 lines
+processed 6000000 lines
+processed 7000000 lines
+processed 8000000 lines
+processed 9000000 lines
+processed 10000000 lines
+processed 11000000 lines
+processed 12000000 lines
+processed 13000000 lines
+processed 14000000 lines
+processed 15000000 lines
+processed 16000000 lines
+processed 17000000 lines
+processed 18000000 lines
+processed 19000000 lines
+processed 20000000 lines
+processed 21000000 lines
+processed 22000000 lines
+processed 23000000 lines
+processed 24000000 lines
+processed 25000000 lines
+processed 26000000 lines
+processed 27000000 lines
+processed 28000000 lines
+processed 29000000 lines
+processed 30000000 lines
+processed 31000000 lines
+processed 32000000 lines
+processed 33000000 lines
+processed 34000000 lines
+processed 35000000 lines
+processed 36000000 lines
+processed 37000000 lines
+processed 38000000 lines
+processed 39000000 lines
+processed 40000000 lines
+processed 41000000 lines
+processed 42000000 lines
+processed 43000000 lines
+processed 44000000 lines
+load finished, get training log lines: 44427963
+start to initialize Bu Bi
+init Bu Bi finished, mu:0.181716
+start to initialize UV, u_0:0.050000
+start to initialize user->items
+after train log, 1302011 users have items
+after sns log, 1794404 users have items
+start gradient descent
+start to train, alpha:0.002000, lambda:0.004000
+after training, sum_rmse:430640.875000, size:3791292
+start validation
+after validation, sum_rmse:533875.062500, size:3790243
+iter: 0 training RMSE: 0.337026 validation RMSE: 0.375307, time=214.57
+start to train, alpha:0.001980, lambda:0.004000
+after training, sum_rmse:424578.125000, size:3793639
+start validation
+after validation, sum_rmse:414367.093750, size:3792094
+iter: 1 training RMSE: 0.334542 validation RMSE: 0.330562, time=216.87
+start to train, alpha:0.001960, lambda:0.004000
+after training, sum_rmse:408003.531250, size:3792830
+start validation
+after validation, sum_rmse:408908.875000, size:3791798
+iter: 2 training RMSE: 0.327982 validation RMSE: 0.328391, time=213.95
+start to train, alpha:0.001941, lambda:0.004000
+after training, sum_rmse:404692.562500, size:3792806
+start validation
+after validation, sum_rmse:402870.718750, size:3791601
+iter: 3 training RMSE: 0.32665 validation RMSE: 0.325965, time=214.44
+start to train, alpha:0.001921, lambda:0.004000
+after training, sum_rmse:402992.031250, size:3791133
+start validation
+after validation, sum_rmse:401787.187500, size:3790999
+iter: 4 training RMSE: 0.326035 validation RMSE: 0.325553, time=212.84
+start to train, alpha:0.001902, lambda:0.004000
+after training, sum_rmse:402647.468750, size:3791436
+start validation
+after validation, sum_rmse:402042.562500, size:3793119
+iter: 5 training RMSE: 0.325882 validation RMSE: 0.325565, time=213.81
+start to train, alpha:0.001883, lambda:0.004000
+after training, sum_rmse:402298.687500, size:3792556
+start validation
+after validation, sum_rmse:401238.906250, size:3794512
+iter: 6 training RMSE: 0.325693 validation RMSE: 0.32518, time=214.35
+start to train, alpha:0.001864, lambda:0.004000
+after training, sum_rmse:401469.312500, size:3791504
+start validation
+after validation, sum_rmse:400735.750000, size:3791727
+iter: 7 training RMSE: 0.325402 validation RMSE: 0.325095, time=212.81
+start to train, alpha:0.001845, lambda:0.004000
+after training, sum_rmse:401006.531250, size:3792842
+start validation
+after validation, sum_rmse:400963.781250, size:3792998
+iter: 8 training RMSE: 0.325157 validation RMSE: 0.325133, time=213.97
+start to train, alpha:0.001827, lambda:0.004000
+after training, sum_rmse:400679.562500, size:3792147
+start validation
+after validation, sum_rmse:399471.406250, size:3791880
+iter: 9 training RMSE: 0.325054 validation RMSE: 0.324575, time=214.26
+start to train, alpha:0.001809, lambda:0.004000
+after training, sum_rmse:400164.562500, size:3792454
+start validation
+after validation, sum_rmse:399599.781250, size:3791654
+iter: 10 training RMSE: 0.324832 validation RMSE: 0.324637, time=212.87
+start to train, alpha:0.001791, lambda:0.004000
+after training, sum_rmse:400055.062500, size:3792676
+start validation
+after validation, sum_rmse:399995.093750, size:3792704
+iter: 11 training RMSE: 0.324778 validation RMSE: 0.324753, time=213.89
+start to train, alpha:0.001773, lambda:0.004000
+after training, sum_rmse:399587.937500, size:3791720
+start validation
+after validation, sum_rmse:399734.531250, size:3791541
+iter: 12 training RMSE: 0.32463 validation RMSE: 0.324697, time=214.43
+start to train, alpha:0.001755, lambda:0.004000
+after training, sum_rmse:399747.437500, size:3793516
+start validation
+after validation, sum_rmse:399479.781250, size:3793575
+iter: 13 training RMSE: 0.324617 validation RMSE: 0.324506, time=213.03
+start to train, alpha:0.001737, lambda:0.004000
+after training, sum_rmse:400236.656250, size:3793328
+start validation
+after validation, sum_rmse:399697.562500, size:3793551
+iter: 14 training RMSE: 0.324824 validation RMSE: 0.324596, time=213.66
+start to train, alpha:0.001720, lambda:0.004000
+after training, sum_rmse:399542.687500, size:3791877
+start validation
+after validation, sum_rmse:398889.468750, size:3792547
+iter: 15 training RMSE: 0.324604 validation RMSE: 0.32431, time=214.26
+start to train, alpha:0.001703, lambda:0.004000
+after training, sum_rmse:398698.875000, size:3792442
+start validation
+after validation, sum_rmse:399260.531250, size:3793463
+iter: 16 training RMSE: 0.324237 validation RMSE: 0.324422, time=213.24
+start to train, alpha:0.001686, lambda:0.004000
+after training, sum_rmse:398779.906250, size:3791966
+start validation
+after validation, sum_rmse:398686.187500, size:3792297
+iter: 17 training RMSE: 0.324291 validation RMSE: 0.324238, time=213.74
+start to train, alpha:0.001669, lambda:0.004000
+after training, sum_rmse:398134.843750, size:3793173
+start validation
+after validation, sum_rmse:398410.125000, size:3792728
+iter: 18 training RMSE: 0.323977 validation RMSE: 0.324108, time=214.36
+start to train, alpha:0.001652, lambda:0.004000
+after training, sum_rmse:398723.656250, size:3791937
+start validation
+after validation, sum_rmse:398082.125000, size:3791832
+iter: 19 training RMSE: 0.324269 validation RMSE: 0.324013, time=209.18
+start to train, alpha:0.001636, lambda:0.004000
+after training, sum_rmse:398475.906250, size:3791434
+start validation
+after validation, sum_rmse:398779.312500, size:3793636
+iter: 20 training RMSE: 0.32419 validation RMSE: 0.324219, time=207.59
+start to train, alpha:0.001619, lambda:0.004000
+after training, sum_rmse:398187.250000, size:3791066
+start validation
+after validation, sum_rmse:398622.031250, size:3792862
+iter: 21 training RMSE: 0.324088 validation RMSE: 0.324188, time=208.26
+start to train, alpha:0.001603, lambda:0.004000
+after training, sum_rmse:398951.281250, size:3792747
+start validation
+after validation, sum_rmse:398219.937500, size:3791925
+iter: 22 training RMSE: 0.324327 validation RMSE: 0.324065, time=205.11
+start to train, alpha:0.001587, lambda:0.004000
+after training, sum_rmse:398119.156250, size:3792229
+start validation
+after validation, sum_rmse:398188.937500, size:3791951
+iter: 23 training RMSE: 0.324011 validation RMSE: 0.324051, time=205.11
+start to train, alpha:0.001571, lambda:0.004000
+after training, sum_rmse:398091.375000, size:3791343
+start validation
+after validation, sum_rmse:398054.187500, size:3793272
+iter: 24 training RMSE: 0.324037 validation RMSE: 0.32394, time=205.23
+start to train, alpha:0.001556, lambda:0.004000
+after training, sum_rmse:398780.687500, size:3792829
+start validation
+after validation, sum_rmse:398051.156250, size:3791546
+iter: 25 training RMSE: 0.324254 validation RMSE: 0.324012, time=205.2
+start to train, alpha:0.001540, lambda:0.004000
+after training, sum_rmse:397934.281250, size:3792311
+start validation
+after validation, sum_rmse:398823.656250, size:3794743
+iter: 26 training RMSE: 0.323932 validation RMSE: 0.32419, time=205.53
+start to train, alpha:0.001525, lambda:0.004000
+after training, sum_rmse:398683.812500, size:3791807
+start validation
+after validation, sum_rmse:398180.875000, size:3792493
+iter: 27 training RMSE: 0.324258 validation RMSE: 0.324024, time=214
+start to train, alpha:0.001509, lambda:0.004000
+after training, sum_rmse:398230.406250, size:3792489
+start validation
+after validation, sum_rmse:397752.531250, size:3791943
+iter: 28 training RMSE: 0.324045 validation RMSE: 0.323874, time=210.24
+start to train, alpha:0.001494, lambda:0.004000
+after training, sum_rmse:397898.437500, size:3790939
+start validation
+after validation, sum_rmse:398244.531250, size:3793439
+iter: 29 training RMSE: 0.323976 validation RMSE: 0.32401, time=214.29
+start to train, alpha:0.001479, lambda:0.004000
+after training, sum_rmse:398116.531250, size:3790748
+start validation
+after validation, sum_rmse:398582.937500, size:3792225
+iter: 30 training RMSE: 0.324073 validation RMSE: 0.324199, time=214.99
+start to train, alpha:0.001465, lambda:0.004000
+after training, sum_rmse:398524.500000, size:3791307
+start validation
+after validation, sum_rmse:398000.406250, size:3791256
+iter: 31 training RMSE: 0.324215 validation RMSE: 0.324004, time=215.37
+start to train, alpha:0.001450, lambda:0.004000
+after training, sum_rmse:398371.031250, size:3792828
+start validation
+after validation, sum_rmse:397225.312500, size:3792342
+iter: 32 training RMSE: 0.324088 validation RMSE: 0.323642, time=217.42
+start to train, alpha:0.001435, lambda:0.004000
+after training, sum_rmse:397681.687500, size:3792638
+start validation
+after validation, sum_rmse:397582.375000, size:3792637
+iter: 33 training RMSE: 0.323815 validation RMSE: 0.323775, time=215.79
+start to train, alpha:0.001421, lambda:0.004000
+after training, sum_rmse:398197.531250, size:3793175
+start validation
+after validation, sum_rmse:397529.750000, size:3791954
+iter: 34 training RMSE: 0.324002 validation RMSE: 0.323782, time=214.79
+start to train, alpha:0.001407, lambda:0.004000
+after training, sum_rmse:397728.906250, size:3792259
+start validation
+after validation, sum_rmse:398340.500000, size:3793891
+iter: 35 training RMSE: 0.323851 validation RMSE: 0.32403, time=214.93
+start to train, alpha:0.001393, lambda:0.004000
+after training, sum_rmse:397706.218750, size:3792751
+start validation
+after validation, sum_rmse:397248.406250, size:3791644
+iter: 36 training RMSE: 0.32382 validation RMSE: 0.323681, time=217.35
+start to train, alpha:0.001379, lambda:0.004000
+after training, sum_rmse:397283.906250, size:3792026
+start validation
+after validation, sum_rmse:397306.500000, size:3792823
+iter: 37 training RMSE: 0.323679 validation RMSE: 0.323654, time=216.17
+start to train, alpha:0.001365, lambda:0.004000
+after training, sum_rmse:398074.406250, size:3793330
+start validation
+after validation, sum_rmse:397617.750000, size:3792988
+iter: 38 training RMSE: 0.323945 validation RMSE: 0.323774, time=214.68
+start to train, alpha:0.001351, lambda:0.004000
+after training, sum_rmse:397475.687500, size:3792268
+start validation
+after validation, sum_rmse:397856.406250, size:3793970
+iter: 39 training RMSE: 0.323747 validation RMSE: 0.323829, time=214.76
+start to train, alpha:0.001338, lambda:0.004000
+after training, sum_rmse:396857.125000, size:3790897
+start validation
+after validation, sum_rmse:396844.093750, size:3790570
+iter: 40 training RMSE: 0.323554 validation RMSE: 0.323562, time=217.11
+start to train, alpha:0.001325, lambda:0.004000
+after training, sum_rmse:397637.843750, size:3791271
+start validation
+after validation, sum_rmse:397612.656250, size:3791566
+iter: 41 training RMSE: 0.323856 validation RMSE: 0.323833, time=214.18
+gradient descent is finished
+start to test
+processed 100000 lines
+processed 200000 lines
+processed 300000 lines
+processed 400000 lines
+processed 500000 lines
+processed 600000 lines
+processed 700000 lines
+processed 800000 lines
+processed 900000 lines
+processed 1000000 lines
+processed 1100000 lines
+processed 1200000 lines
+processed 1300000 lines
+  adding: sample1.txt (deflated 78%)
+rm: cannot remove `sample1.txt.zip': No such file or directory
+rm: cannot remove `sample1.txt': No such file or directory
+rm Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o  SVDBiasPredictor_update.o SVDBiasPredictor_data.o demo 
+rm: cannot remove `Predictor_data.o': No such file or directory
+rm: cannot remove `Predictor_train.o': No such file or directory
+rm: cannot remove `Predictor_test.o': No such file or directory
+rm: cannot remove `SGD.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_init.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_update.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_data.o': No such file or directory
+rm: cannot remove `demo': No such file or directory
+make: *** [clean] Error 1
+g++ -Wall -O3 -msse2   -c -o Predictor_data.o Predictor_data.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_train.o Predictor_train.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_test.o Predictor_test.cpp
+g++ -Wall -O3 -msse2   -c -o SGD.o SGD.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_init.o SVDBiasPredictor_init.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_update.o SVDBiasPredictor_update.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_data.o SVDBiasPredictor_data.cpp
+g++ -Wall -O3 -msse2 -lpthread -lm -o demo CF_main.cpp Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o SVDBiasPredictor_update.o SVDBiasPredictor_data.o
+start SVDBiasPredictor
+start to load items: ../../data/pig/item.txt
+load items finished, size: 6095
+start to load users: ../../data/pig/user_profile.txt
+processed 1000000 lines
+processed 2000000 lines
+load users finished, size: 2320895
+start to load data: ../../data/pig_mid/session_train.8.txt
+processed 1000000 lines, 182156 positive, 817844 negative
+processed 2000000 lines, 364036 positive, 1635964 negative
+processed 3000000 lines, 545782 positive, 2454218 negative
+processed 4000000 lines, 726992 positive, 3273008 negative
+processed 5000000 lines, 908979 positive, 4091021 negative
+processed 6000000 lines, 1091302 positive, 4908698 negative
+processed 7000000 lines, 1272460 positive, 5727540 negative
+processed 8000000 lines, 1453668 positive, 6546332 negative
+processed 9000000 lines, 1634830 positive, 7365170 negative
+processed 10000000 lines, 1816754 positive, 8183246 negative
+processed 11000000 lines, 1998243 positive, 9001757 negative
+processed 12000000 lines, 2180087 positive, 9819913 negative
+processed 13000000 lines, 2361730 positive, 10638270 negative
+processed 14000000 lines, 2543368 positive, 11456632 negative
+processed 15000000 lines, 2725159 positive, 12274841 negative
+processed 16000000 lines, 2907573 positive, 13092427 negative
+processed 17000000 lines, 3088917 positive, 13911083 negative
+processed 18000000 lines, 3270097 positive, 14729903 negative
+processed 19000000 lines, 3451468 positive, 15548532 negative
+processed 20000000 lines, 3632882 positive, 16367118 negative
+load finished, get training log lines: 20857086
+start to load data: ../../data/pig_mid/sns.3.txt
+processed 1000000 lines
+processed 2000000 lines
+processed 3000000 lines
+processed 4000000 lines
+processed 5000000 lines
+processed 6000000 lines
+processed 7000000 lines
+processed 8000000 lines
+processed 9000000 lines
+processed 10000000 lines
+processed 11000000 lines
+processed 12000000 lines
+processed 13000000 lines
+processed 14000000 lines
+processed 15000000 lines
+processed 16000000 lines
+processed 17000000 lines
+processed 18000000 lines
+processed 19000000 lines
+processed 20000000 lines
+processed 21000000 lines
+processed 22000000 lines
+processed 23000000 lines
+processed 24000000 lines
+processed 25000000 lines
+processed 26000000 lines
+processed 27000000 lines
+processed 28000000 lines
+processed 29000000 lines
+processed 30000000 lines
+processed 31000000 lines
+processed 32000000 lines
+processed 33000000 lines
+processed 34000000 lines
+processed 35000000 lines
+processed 36000000 lines
+processed 37000000 lines
+processed 38000000 lines
+processed 39000000 lines
+processed 40000000 lines
+processed 41000000 lines
+load finished, get training log lines: 41743798
+start to initialize Bu Bi
+init Bu Bi finished, mu:0.163737
+start to initialize UV, u_0:0.050000
+start to initialize user->items
+after train log, 1301819 users have items
+after sns log, 1724510 users have items
+start gradient descent
+start to train, alpha:0.002000, lambda:0.004000
+after training, sum_rmse:403318.968750, size:3790440
+start validation
+after validation, sum_rmse:385578.312500, size:3792229
+iter: 0 training RMSE: 0.326197 validation RMSE: 0.318867, time=202.88
+start to train, alpha:0.001980, lambda:0.004000
+after training, sum_rmse:387862.000000, size:3791686
+start validation
+after validation, sum_rmse:385807.468750, size:3791337
+iter: 1 training RMSE: 0.319832 validation RMSE: 0.318999, time=204.82
+start to train, alpha:0.001960, lambda:0.004000
+after training, sum_rmse:385625.875000, size:3793707
+start validation
+after validation, sum_rmse:387871.593750, size:3792114
+iter: 2 training RMSE: 0.318824 validation RMSE: 0.319818, time=205.11
+start to train, alpha:0.001941, lambda:0.004000
+after training, sum_rmse:377694.468750, size:3791489
+start validation
+after validation, sum_rmse:376860.281250, size:3792458
+iter: 3 training RMSE: 0.315621 validation RMSE: 0.315232, time=205.04
+start to train, alpha:0.001921, lambda:0.004000
+after training, sum_rmse:383796.968750, size:3791282
+start validation
+after validation, sum_rmse:376226.625000, size:3792307
+iter: 4 training RMSE: 0.318169 validation RMSE: 0.314973, time=205.17
+gradient descent is finished
+start to test
+processed 100000 lines
+processed 200000 lines
+processed 300000 lines
+processed 400000 lines
+processed 500000 lines
+processed 600000 lines
+processed 700000 lines
+processed 800000 lines
+processed 900000 lines
+processed 1000000 lines
+processed 1100000 lines
+processed 1200000 lines
+processed 1300000 lines
+  adding: sample1.txt (deflated 78%)
+rm Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o  SVDBiasPredictor_update.o SVDBiasPredictor_data.o demo 
+g++ -Wall -O3 -msse2   -c -o Predictor_data.o Predictor_data.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_train.o Predictor_train.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_test.o Predictor_test.cpp
+g++ -Wall -O3 -msse2   -c -o SGD.o SGD.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_init.o SVDBiasPredictor_init.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_update.o SVDBiasPredictor_update.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_data.o SVDBiasPredictor_data.cpp
+g++ -Wall -O3 -msse2 -lpthread -lm -o demo CF_main.cpp Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o SVDBiasPredictor_update.o SVDBiasPredictor_data.o
+start SVDBiasPredictor
+start to load items: ../../data/pig/item.txt
+load items finished, size: 6095
+start to load users: ../../data/pig/user_profile.txt
+processed 1000000 lines
+processed 2000000 lines
+load users finished, size: 2320895
+start to load data: ../../data/pig_mid/session_train.8.txt
+processed 1000000 lines, 182156 positive, 817844 negative
+processed 2000000 lines, 364036 positive, 1635964 negative
+processed 3000000 lines, 545782 positive, 2454218 negative
+processed 4000000 lines, 726992 positive, 3273008 negative
+processed 5000000 lines, 908979 positive, 4091021 negative
+processed 6000000 lines, 1091302 positive, 4908698 negative
+processed 7000000 lines, 1272460 positive, 5727540 negative
+processed 8000000 lines, 1453668 positive, 6546332 negative
+processed 9000000 lines, 1634830 positive, 7365170 negative
+processed 10000000 lines, 1816754 positive, 8183246 negative
+processed 11000000 lines, 1998243 positive, 9001757 negative
+processed 12000000 lines, 2180087 positive, 9819913 negative
+processed 13000000 lines, 2361730 positive, 10638270 negative
+processed 14000000 lines, 2543368 positive, 11456632 negative
+processed 15000000 lines, 2725159 positive, 12274841 negative
+processed 16000000 lines, 2907573 positive, 13092427 negative
+processed 17000000 lines, 3088917 positive, 13911083 negative
+processed 18000000 lines, 3270097 positive, 14729903 negative
+processed 19000000 lines, 3451468 positive, 15548532 negative
+processed 20000000 lines, 3632882 positive, 16367118 negative
+load finished, get training log lines: 20857086
+start to load data: ../../data/pig_mid/sns.3.txt
+processed 1000000 lines
+processed 2000000 lines
+processed 3000000 lines
+processed 4000000 lines
+processed 5000000 lines
+processed 6000000 lines
+processed 7000000 lines
+processed 8000000 lines
+processed 9000000 lines
+processed 10000000 lines
+processed 11000000 lines
+processed 12000000 lines
+processed 13000000 lines
+processed 14000000 lines
+processed 15000000 lines
+processed 16000000 lines
+processed 17000000 lines
+processed 18000000 lines
+processed 19000000 lines
+processed 20000000 lines
+processed 21000000 lines
+processed 22000000 lines
+processed 23000000 lines
+processed 24000000 lines
+processed 25000000 lines
+processed 26000000 lines
+processed 27000000 lines
+processed 28000000 lines
+processed 29000000 lines
+processed 30000000 lines
+processed 31000000 lines
+processed 32000000 lines
+processed 33000000 lines
+processed 34000000 lines
+processed 35000000 lines
+processed 36000000 lines
+processed 37000000 lines
+processed 38000000 lines
+processed 39000000 lines
+processed 40000000 lines
+processed 41000000 lines
+load finished, get training log lines: 41743798
+start to initialize Bu Bi
+init Bu Bi finished, mu:0.163737
+start to initialize UV, u_0:0.050000
+start to initialize user->items
+after train log, 1301819 users have items
+after sns log, 1724510 users have items
+start gradient descent
+start to train, alpha:0.002000, lambda:0.004000
+after training, sum_rmse:1387191.750000, size:13905799
+start validation
+after validation, sum_rmse:1355187.875000, size:13906378
+iter: 0 training RMSE: 0.315842 validation RMSE: 0.312171, time=774.71
+start to train, alpha:0.001980, lambda:0.004000
+after training, sum_rmse:1350229.375000, size:13906702
+start validation
+after validation, sum_rmse:1344966.125000, size:13904426
+iter: 1 training RMSE: 0.311596 validation RMSE: 0.311013, time=777.83
+start to train, alpha:0.001960, lambda:0.004000
+after training, sum_rmse:1346559.875000, size:13904892
+start validation
+after validation, sum_rmse:1337693.500000, size:13902600
+iter: 2 training RMSE: 0.311192 validation RMSE: 0.310192, time=777.55
+start to train, alpha:0.001941, lambda:0.004000
+after training, sum_rmse:1338908.000000, size:13905330
+start validation
+after validation, sum_rmse:1337196.125000, size:13905244
+iter: 3 training RMSE: 0.310302 validation RMSE: 0.310105, time=777.96
+start to train, alpha:0.001921, lambda:0.004000
+after training, sum_rmse:1336571.000000, size:13904659
+start validation
+after validation, sum_rmse:1332551.875000, size:13905535
+iter: 4 training RMSE: 0.310039 validation RMSE: 0.309562, time=777.72
+start to train, alpha:0.001902, lambda:0.004000
+after training, sum_rmse:1334232.750000, size:13904974
+start validation
+after validation, sum_rmse:1331180.625000, size:13906614
+iter: 5 training RMSE: 0.309764 validation RMSE: 0.309391, time=777.86
+start to train, alpha:0.001883, lambda:0.004000
+after training, sum_rmse:1332211.625000, size:13905189
+start validation
+after validation, sum_rmse:1328957.375000, size:13902515
+iter: 6 training RMSE: 0.309527 validation RMSE: 0.309178, time=777.69
+start to train, alpha:0.001864, lambda:0.004000
+after training, sum_rmse:1331739.375000, size:13904577
+start validation
+after validation, sum_rmse:1328542.125000, size:13905036
+iter: 7 training RMSE: 0.309479 validation RMSE: 0.309102, time=777.84
+start to train, alpha:0.001845, lambda:0.004000
+after training, sum_rmse:1330180.125000, size:13905196
+start validation
+after validation, sum_rmse:1326445.500000, size:13902213
+iter: 8 training RMSE: 0.309291 validation RMSE: 0.308889, time=777.65
+start to train, alpha:0.001827, lambda:0.004000
+after training, sum_rmse:1329548.250000, size:13905012
+start validation
+after validation, sum_rmse:1326366.750000, size:13907078
+iter: 9 training RMSE: 0.309219 validation RMSE: 0.308826, time=777.66
+start to train, alpha:0.001809, lambda:0.004000
+after training, sum_rmse:1328972.750000, size:13904982
+start validation
+after validation, sum_rmse:1325399.000000, size:13906165
+iter: 10 training RMSE: 0.309153 validation RMSE: 0.308723, time=777.7
+start to train, alpha:0.001791, lambda:0.004000
+after training, sum_rmse:1327030.375000, size:13904414
+start validation
+after validation, sum_rmse:1324633.875000, size:13906206
+iter: 11 training RMSE: 0.308933 validation RMSE: 0.308634, time=777.84
+start to train, alpha:0.001773, lambda:0.004000
+after training, sum_rmse:1326643.000000, size:13904363
+start validation
+after validation, sum_rmse:1323867.750000, size:13902057
+iter: 12 training RMSE: 0.308888 validation RMSE: 0.308591, time=777.6
+start to train, alpha:0.001755, lambda:0.004000
+after training, sum_rmse:1326809.750000, size:13902434
+start validation
+after validation, sum_rmse:1323398.125000, size:13906191
+iter: 13 training RMSE: 0.308929 validation RMSE: 0.30849, time=777.91
+start to train, alpha:0.001737, lambda:0.004000
+after training, sum_rmse:1325360.000000, size:13907493
+start validation
+after validation, sum_rmse:1322707.875000, size:13904939
+iter: 14 training RMSE: 0.308704 validation RMSE: 0.308423, time=777.81
+start to train, alpha:0.001720, lambda:0.004000
+after training, sum_rmse:1325258.500000, size:13903890
+start validation
+after validation, sum_rmse:1322852.875000, size:13904378
+iter: 15 training RMSE: 0.308732 validation RMSE: 0.308447, time=777.87
+start to train, alpha:0.001703, lambda:0.004000
+after training, sum_rmse:1324845.000000, size:13903948
+start validation
+after validation, sum_rmse:1321801.875000, size:13904852
+iter: 16 training RMSE: 0.308684 validation RMSE: 0.308319, time=777.82
+start to train, alpha:0.001686, lambda:0.004000
+after training, sum_rmse:1323984.250000, size:13904383
+start validation
+after validation, sum_rmse:1321483.875000, size:13902906
+iter: 17 training RMSE: 0.308578 validation RMSE: 0.308303, time=778.01
+start to train, alpha:0.001669, lambda:0.004000
+after training, sum_rmse:1323168.000000, size:13906241
+start validation
+after validation, sum_rmse:1322003.250000, size:13906394
+iter: 18 training RMSE: 0.308463 validation RMSE: 0.308325, time=777.78
+start to train, alpha:0.001652, lambda:0.004000
+after training, sum_rmse:1323012.125000, size:13904881
+start validation
+after validation, sum_rmse:1320980.250000, size:13904099
+iter: 19 training RMSE: 0.30846 validation RMSE: 0.308231, time=777.78
+start to train, alpha:0.001636, lambda:0.004000
+after training, sum_rmse:1322426.750000, size:13904893
+start validation
+after validation, sum_rmse:1320958.500000, size:13905272
+iter: 20 training RMSE: 0.308391 validation RMSE: 0.308216, time=775.18
+start to train, alpha:0.001619, lambda:0.004000
+after training, sum_rmse:1322477.625000, size:13903141
+start validation
+after validation, sum_rmse:1320036.375000, size:13905386
+iter: 21 training RMSE: 0.308417 validation RMSE: 0.308107, time=775.03
+start to train, alpha:0.001603, lambda:0.004000
+after training, sum_rmse:1321972.875000, size:13907277
+start validation
+after validation, sum_rmse:1319663.375000, size:13904745
+iter: 22 training RMSE: 0.308312 validation RMSE: 0.30807, time=775.17
+start to train, alpha:0.001587, lambda:0.004000
+after training, sum_rmse:1321584.375000, size:13903837
+start validation
+after validation, sum_rmse:1318762.125000, size:13904837
+iter: 23 training RMSE: 0.308305 validation RMSE: 0.307964, time=775.07
+start to train, alpha:0.001571, lambda:0.004000
+after training, sum_rmse:1321480.250000, size:13904087
+start validation
+after validation, sum_rmse:1319160.875000, size:13903782
+iter: 24 training RMSE: 0.30829 validation RMSE: 0.308022, time=774.8
+start to train, alpha:0.001556, lambda:0.004000
+after training, sum_rmse:1321047.000000, size:13903300
+start validation
+after validation, sum_rmse:1319155.125000, size:13907033
+iter: 25 training RMSE: 0.308248 validation RMSE: 0.307986, time=774.98
+start to train, alpha:0.001540, lambda:0.004000
+after training, sum_rmse:1321037.250000, size:13906498
+start validation
+after validation, sum_rmse:1318749.625000, size:13905241
+iter: 26 training RMSE: 0.308211 validation RMSE: 0.307958, time=775.14
+start to train, alpha:0.001525, lambda:0.004000
+after training, sum_rmse:1320535.125000, size:13904723
+start validation
+after validation, sum_rmse:1318309.750000, size:13905303
+iter: 27 training RMSE: 0.308172 validation RMSE: 0.307906, time=774.99
+start to train, alpha:0.001509, lambda:0.004000
+after training, sum_rmse:1320720.125000, size:13905697
+start validation
+after validation, sum_rmse:1318065.250000, size:13904089
+iter: 28 training RMSE: 0.308183 validation RMSE: 0.307891, time=775.15
+start to train, alpha:0.001494, lambda:0.004000
+after training, sum_rmse:1320212.500000, size:13902274
+start validation
+after validation, sum_rmse:1318300.750000, size:13905674
+iter: 29 training RMSE: 0.308162 validation RMSE: 0.307901, time=774.99
+start to train, alpha:0.001479, lambda:0.004000
+after training, sum_rmse:1320078.875000, size:13905658
+start validation
+after validation, sum_rmse:1317675.250000, size:13904287
+iter: 30 training RMSE: 0.308109 validation RMSE: 0.307843, time=775.28
+start to train, alpha:0.001465, lambda:0.004000
+after training, sum_rmse:1320169.250000, size:13906323
+start validation
+after validation, sum_rmse:1317230.375000, size:13903689
+iter: 31 training RMSE: 0.308112 validation RMSE: 0.307798, time=775.1
+start to train, alpha:0.001450, lambda:0.004000
+after training, sum_rmse:1319357.125000, size:13903445
+start validation
+after validation, sum_rmse:1316904.875000, size:13904410
+iter: 32 training RMSE: 0.308049 validation RMSE: 0.307752, time=775.23
+start to train, alpha:0.001435, lambda:0.004000
+after training, sum_rmse:1319171.000000, size:13905037
+start validation
+after validation, sum_rmse:1316879.375000, size:13907422
+iter: 33 training RMSE: 0.30801 validation RMSE: 0.307716, time=775.28
+start to train, alpha:0.001421, lambda:0.004000
+after training, sum_rmse:1318580.750000, size:13904517
+start validation
+after validation, sum_rmse:1317006.250000, size:13903739
+iter: 34 training RMSE: 0.307947 validation RMSE: 0.307771, time=775.09
+start to train, alpha:0.001407, lambda:0.004000
+after training, sum_rmse:1318707.500000, size:13905387
+start validation
+after validation, sum_rmse:1316349.000000, size:13904620
+iter: 35 training RMSE: 0.307952 validation RMSE: 0.307685, time=775.23
+start to train, alpha:0.001393, lambda:0.004000
+after training, sum_rmse:1318817.625000, size:13907006
+start validation
+after validation, sum_rmse:1316544.250000, size:13905387
+iter: 36 training RMSE: 0.307947 validation RMSE: 0.307699, time=775.18
+start to train, alpha:0.001379, lambda:0.004000
+after training, sum_rmse:1318758.375000, size:13905887
+start validation
+after validation, sum_rmse:1315965.375000, size:13905161
+iter: 37 training RMSE: 0.307952 validation RMSE: 0.307634, time=775.5
+start to train, alpha:0.001365, lambda:0.004000
+after training, sum_rmse:1318028.875000, size:13905327
+start validation
+after validation, sum_rmse:1315973.750000, size:13903736
+iter: 38 training RMSE: 0.307873 validation RMSE: 0.307651, time=775.27
+start to train, alpha:0.001351, lambda:0.004000
+after training, sum_rmse:1318011.750000, size:13905730
+start validation
+after validation, sum_rmse:1316503.625000, size:13904731
+iter: 39 training RMSE: 0.307867 validation RMSE: 0.307702, time=775.14
+start to train, alpha:0.001338, lambda:0.004000
+after training, sum_rmse:1317627.125000, size:13901730
+start validation
+after validation, sum_rmse:1316232.500000, size:13904292
+iter: 40 training RMSE: 0.307866 validation RMSE: 0.307675, time=775.07
+start to train, alpha:0.001325, lambda:0.004000
+after training, sum_rmse:1317329.500000, size:13902701
+start validation
+after validation, sum_rmse:1315842.750000, size:13904021
+iter: 41 training RMSE: 0.307821 validation RMSE: 0.307632, time=775.04
+start to train, alpha:0.001311, lambda:0.004000
+after training, sum_rmse:1317150.125000, size:13904821
+start validation
+after validation, sum_rmse:1316322.875000, size:13905641
+iter: 42 training RMSE: 0.307776 validation RMSE: 0.30767, time=775.07
+start to train, alpha:0.001298, lambda:0.004000
+after training, sum_rmse:1317217.125000, size:13904842
+start validation
+after validation, sum_rmse:1315034.625000, size:13902456
+iter: 43 training RMSE: 0.307784 validation RMSE: 0.307555, time=775.02
+start to train, alpha:0.001285, lambda:0.004000
+after training, sum_rmse:1317014.250000, size:13903440
+start validation
+after validation, sum_rmse:1315084.000000, size:13907263
+iter: 44 training RMSE: 0.307776 validation RMSE: 0.307508, time=774.97
+start to train, alpha:0.001272, lambda:0.004000
+after training, sum_rmse:1316745.500000, size:13906656
+start validation
+after validation, sum_rmse:1315184.375000, size:13905148
+iter: 45 training RMSE: 0.307709 validation RMSE: 0.307543, time=775.21
+start to train, alpha:0.001260, lambda:0.004000
+after training, sum_rmse:1317287.375000, size:13904514
+start validation
+after validation, sum_rmse:1314641.875000, size:13905899
+iter: 46 training RMSE: 0.307796 validation RMSE: 0.307471, time=775.08
+start to train, alpha:0.001247, lambda:0.004000
+after training, sum_rmse:1315990.000000, size:13908126
+start validation
+after validation, sum_rmse:1314848.375000, size:13903545
+iter: 47 training RMSE: 0.307604 validation RMSE: 0.307521, time=775.09
+start to train, alpha:0.001235, lambda:0.004000
+after training, sum_rmse:1315515.875000, size:13902425
+start validation
+after validation, sum_rmse:1314573.250000, size:13903772
+iter: 48 training RMSE: 0.307612 validation RMSE: 0.307487, time=775.14
+start to train, alpha:0.001222, lambda:0.004000
+after training, sum_rmse:1316499.250000, size:13905593
+start validation
+after validation, sum_rmse:1314175.125000, size:13904475
+iter: 49 training RMSE: 0.307692 validation RMSE: 0.307432, time=775.14
+start to train, alpha:0.001210, lambda:0.004000
+after training, sum_rmse:1316204.500000, size:13904555
+start validation
+after validation, sum_rmse:1314143.000000, size:13905142
+iter: 50 training RMSE: 0.307669 validation RMSE: 0.307421, time=775.23
+start to train, alpha:0.001198, lambda:0.004000
+after training, sum_rmse:1316037.500000, size:13903220
+start validation
+after validation, sum_rmse:1313540.125000, size:13903676
+iter: 51 training RMSE: 0.307664 validation RMSE: 0.307367, time=775.01
+start to train, alpha:0.001186, lambda:0.004000
+after training, sum_rmse:1315831.000000, size:13904541
+start validation
+after validation, sum_rmse:1313626.625000, size:13902979
+iter: 52 training RMSE: 0.307625 validation RMSE: 0.307385, time=774.98
+start to train, alpha:0.001174, lambda:0.004000
+after training, sum_rmse:1315453.500000, size:13905626
+start validation
+after validation, sum_rmse:1314222.375000, size:13904731
+iter: 53 training RMSE: 0.307569 validation RMSE: 0.307435, time=775.19
+start to train, alpha:0.001162, lambda:0.004000
+after training, sum_rmse:1315821.625000, size:13904999
+start validation
+after validation, sum_rmse:1313065.500000, size:13902296
+iter: 54 training RMSE: 0.307619 validation RMSE: 0.307326, time=775.18
+start to train, alpha:0.001151, lambda:0.004000
+after training, sum_rmse:1315740.250000, size:13904430
+start validation
+after validation, sum_rmse:1313852.750000, size:13905266
+iter: 55 training RMSE: 0.307616 validation RMSE: 0.307386, time=775.02
+start to train, alpha:0.001139, lambda:0.004000
+after training, sum_rmse:1314590.000000, size:13903239
+start validation
+after validation, sum_rmse:1313426.375000, size:13904147
+iter: 56 training RMSE: 0.307494 validation RMSE: 0.307348, time=775.1
+start to train, alpha:0.001128, lambda:0.004000
+after training, sum_rmse:1315096.875000, size:13903597
+start validation
+after validation, sum_rmse:1314278.375000, size:13904603
+iter: 57 training RMSE: 0.30755 validation RMSE: 0.307443, time=775.03
+start to train, alpha:0.001117, lambda:0.004000
+after training, sum_rmse:1315190.250000, size:13905973
+start validation
+after validation, sum_rmse:1312898.875000, size:13905054
+iter: 58 training RMSE: 0.307534 validation RMSE: 0.307276, time=775
+start to train, alpha:0.001105, lambda:0.004000
+after training, sum_rmse:1315275.750000, size:13904631
+start validation
+after validation, sum_rmse:1313126.250000, size:13905567
+iter: 59 training RMSE: 0.307559 validation RMSE: 0.307297, time=775.15
+gradient descent is finished
+start to test
+processed 100000 lines
+processed 200000 lines
+processed 300000 lines
+processed 400000 lines
+processed 500000 lines
+processed 600000 lines
+processed 700000 lines
+processed 800000 lines
+processed 900000 lines
+processed 1000000 lines
+processed 1100000 lines
+processed 1200000 lines
+processed 1300000 lines
+  adding: sample1.txt (deflated 78%)
+rm: cannot remove `sample1.txt.zip': No such file or directory
+rm: cannot remove `sample1.txt': No such file or directory
+rm Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o  SVDBiasPredictor_update.o SVDBiasPredictor_data.o demo 
+rm: cannot remove `Predictor_data.o': No such file or directory
+rm: cannot remove `Predictor_train.o': No such file or directory
+rm: cannot remove `Predictor_test.o': No such file or directory
+rm: cannot remove `SGD.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_init.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_update.o': No such file or directory
+rm: cannot remove `SVDBiasPredictor_data.o': No such file or directory
+rm: cannot remove `demo': No such file or directory
+make: *** [clean] Error 1
+g++ -Wall -O3 -msse2   -c -o Predictor_data.o Predictor_data.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_train.o Predictor_train.cpp
+g++ -Wall -O3 -msse2   -c -o Predictor_test.o Predictor_test.cpp
+g++ -Wall -O3 -msse2   -c -o SGD.o SGD.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_init.o SVDBiasPredictor_init.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_update.o SVDBiasPredictor_update.cpp
+g++ -Wall -O3 -msse2   -c -o SVDBiasPredictor_data.o SVDBiasPredictor_data.cpp
+g++ -Wall -O3 -msse2 -lpthread -lm -o demo CF_main.cpp Predictor_data.o Predictor_train.o Predictor_test.o SGD.o SVDBiasPredictor_init.o SVDBiasPredictor_update.o SVDBiasPredictor_data.o
+start SVDBiasPredictor
+start to load items: ../../data/pig/item.txt
+load items finished, size: 6095
+start to load users: ../../data/pig/user_profile.txt
+processed 1000000 lines
+processed 2000000 lines
+load users finished, size: 2320895
+start to load data: ../../data/pig_mid/session_train.6.txt
+processed 1000000 lines, 182192 positive, 817808 negative
+processed 2000000 lines, 364128 positive, 1635872 negative
+processed 3000000 lines, 545923 positive, 2454077 negative
+processed 4000000 lines, 727186 positive, 3272814 negative
+processed 5000000 lines, 909215 positive, 4090785 negative
+processed 6000000 lines, 1091582 positive, 4908418 negative
+processed 7000000 lines, 1272809 positive, 5727191 negative
+processed 8000000 lines, 1454080 positive, 6545920 negative
+processed 9000000 lines, 1635305 positive, 7364695 negative
+processed 10000000 lines, 1817278 positive, 8182722 negative
+processed 11000000 lines, 1998820 positive, 9001180 negative
+processed 12000000 lines, 2180716 positive, 9819284 negative
+processed 13000000 lines, 2362414 positive, 10637586 negative
+processed 14000000 lines, 2544116 positive, 11455884 negative
+processed 15000000 lines, 2725964 positive, 12274036 negative
+processed 16000000 lines, 2908427 positive, 13091573 negative
+processed 17000000 lines, 3089818 positive, 13910182 negative
+processed 18000000 lines, 3271052 positive, 14728948 negative
+processed 19000000 lines, 3452487 positive, 15547513 negative
+processed 20000000 lines, 3633962 positive, 16366038 negative
+load finished, get training log lines: 20857086
+start to load data: ../../data/pig_mid/sns.2.txt
+processed 1000000 lines
+processed 2000000 lines
+processed 3000000 lines
+processed 4000000 lines
+processed 5000000 lines
+processed 6000000 lines
+processed 7000000 lines
+processed 8000000 lines
+processed 9000000 lines
+processed 10000000 lines
+processed 11000000 lines
+processed 12000000 lines
+processed 13000000 lines
+processed 14000000 lines
+processed 15000000 lines
+processed 16000000 lines
+processed 17000000 lines
+processed 18000000 lines
+processed 19000000 lines
+processed 20000000 lines
+processed 21000000 lines
+processed 22000000 lines
+processed 23000000 lines
+processed 24000000 lines
+processed 25000000 lines
+processed 26000000 lines
+processed 27000000 lines
+processed 28000000 lines
+processed 29000000 lines
+processed 30000000 lines
+processed 31000000 lines
+processed 32000000 lines
+processed 33000000 lines
+processed 34000000 lines
+processed 35000000 lines
+processed 36000000 lines
+processed 37000000 lines
+processed 38000000 lines
+processed 39000000 lines
+processed 40000000 lines
+processed 41000000 lines
+processed 42000000 lines
+processed 43000000 lines
+processed 44000000 lines
+load finished, get training log lines: 44427963
+start to initialize Bu Bi
+init Bu Bi finished, mu:0.181716
+start to initialize UV, u_0:0.050000
+start to initialize user->items
+after train log, 1302011 users have items
+after sns log, 1794404 users have items
+start gradient descent
+start to train, alpha:0.002000, lambda:0.004000
+after training, sum_rmse:1484819.000000, size:13903927
+start validation
+after validation, sum_rmse:1450999.000000, size:13905520
+iter: 0 training RMSE: 0.326789 validation RMSE: 0.323028, time=750.05
+start to train, alpha:0.001980, lambda:0.004000
+after training, sum_rmse:1447574.375000, size:13904944
+start validation
+after validation, sum_rmse:1440340.500000, size:13903752
+iter: 1 training RMSE: 0.322653 validation RMSE: 0.32186, time=752.87
+start to train, alpha:0.001960, lambda:0.004000
+after training, sum_rmse:1440803.875000, size:13904822
+start validation
+after validation, sum_rmse:1434717.125000, size:13904116
+iter: 2 training RMSE: 0.321899 validation RMSE: 0.321227, time=753.17
+start to train, alpha:0.001941, lambda:0.004000
+after training, sum_rmse:1435002.000000, size:13905871
+start validation
+after validation, sum_rmse:1431000.500000, size:13904862
+iter: 3 training RMSE: 0.321238 validation RMSE: 0.320802, time=753.17
+start to train, alpha:0.001921, lambda:0.004000
+after training, sum_rmse:1432004.125000, size:13904548
+start validation
+after validation, sum_rmse:1428882.000000, size:13904302
+iter: 4 training RMSE: 0.320918 validation RMSE: 0.320571, time=754.11
+start to train, alpha:0.001902, lambda:0.004000
+after training, sum_rmse:1431114.750000, size:13904739
+start validation
+after validation, sum_rmse:1427498.250000, size:13905104
+iter: 5 training RMSE: 0.320816 validation RMSE: 0.320406, time=769.13
+start to train, alpha:0.001883, lambda:0.004000
+after training, sum_rmse:1429135.500000, size:13905920
+start validation
+after validation, sum_rmse:1424481.375000, size:13902707
+iter: 6 training RMSE: 0.32058 validation RMSE: 0.320095, time=754.94
+start to train, alpha:0.001864, lambda:0.004000
+after training, sum_rmse:1427826.000000, size:13905900
+start validation
+after validation, sum_rmse:1424608.125000, size:13907029
+iter: 7 training RMSE: 0.320434 validation RMSE: 0.320059, time=768.8
+start to train, alpha:0.001845, lambda:0.004000
+after training, sum_rmse:1426106.875000, size:13905740
+start validation
+after validation, sum_rmse:1423485.000000, size:13904303
+iter: 8 training RMSE: 0.320243 validation RMSE: 0.319965, time=709.08
+start to train, alpha:0.001827, lambda:0.004000
+after training, sum_rmse:1425492.000000, size:13906284
+start validation
+after validation, sum_rmse:1421568.250000, size:13902337
+iter: 9 training RMSE: 0.320167 validation RMSE: 0.319772, time=708.89
+start to train, alpha:0.001809, lambda:0.004000
+after training, sum_rmse:1424352.875000, size:13905643
+start validation
+after validation, sum_rmse:1421113.000000, size:13906619
+iter: 10 training RMSE: 0.320047 validation RMSE: 0.319671, time=708.36
+start to train, alpha:0.001791, lambda:0.004000
+after training, sum_rmse:1422677.000000, size:13906686
+start validation
+after validation, sum_rmse:1420059.000000, size:13904552
+iter: 11 training RMSE: 0.319846 validation RMSE: 0.319576, time=707.95
+start to train, alpha:0.001773, lambda:0.004000
+after training, sum_rmse:1422575.375000, size:13904371
+start validation
+after validation, sum_rmse:1420742.625000, size:13905049
+iter: 12 training RMSE: 0.319862 validation RMSE: 0.319648, time=708.25
+start to train, alpha:0.001755, lambda:0.004000
+after training, sum_rmse:1421833.375000, size:13904641
+start validation
+after validation, sum_rmse:1419056.875000, size:13904531
+iter: 13 training RMSE: 0.319775 validation RMSE: 0.319464, time=713.71
+start to train, alpha:0.001737, lambda:0.004000
+after training, sum_rmse:1421343.750000, size:13905559
+start validation
+after validation, sum_rmse:1418365.250000, size:13905333
+iter: 14 training RMSE: 0.319709 validation RMSE: 0.319377, time=708.6
+start to train, alpha:0.001720, lambda:0.004000
+after training, sum_rmse:1421452.250000, size:13905045
+start validation
+after validation, sum_rmse:1418030.250000, size:13904322
+iter: 15 training RMSE: 0.319727 validation RMSE: 0.319351, time=709.39
+start to train, alpha:0.001703, lambda:0.004000
+after training, sum_rmse:1419857.500000, size:13904113
+start validation
+after validation, sum_rmse:1417019.250000, size:13904213
+iter: 16 training RMSE: 0.319559 validation RMSE: 0.319238, time=709.08
+start to train, alpha:0.001686, lambda:0.004000
+after training, sum_rmse:1420530.125000, size:13905324
+start validation
+after validation, sum_rmse:1417006.375000, size:13905334
+iter: 17 training RMSE: 0.319621 validation RMSE: 0.319224, time=709.18
+start to train, alpha:0.001669, lambda:0.004000
+after training, sum_rmse:1419427.250000, size:13904978
+start validation
+after validation, sum_rmse:1415960.875000, size:13902697
+iter: 18 training RMSE: 0.3195 validation RMSE: 0.319136, time=709.13
+start to train, alpha:0.001652, lambda:0.004000
+after training, sum_rmse:1419356.500000, size:13905042
+start validation
+after validation, sum_rmse:1416388.875000, size:13903931
+iter: 19 training RMSE: 0.319492 validation RMSE: 0.31917, time=709.1
+start to train, alpha:0.001636, lambda:0.004000
+after training, sum_rmse:1418790.875000, size:13905504
+start validation
+after validation, sum_rmse:1415555.500000, size:13906562
+iter: 20 training RMSE: 0.319423 validation RMSE: 0.319046, time=708.62
+start to train, alpha:0.001619, lambda:0.004000
+after training, sum_rmse:1417721.500000, size:13903748
+start validation
+after validation, sum_rmse:1415164.250000, size:13903409
+iter: 21 training RMSE: 0.319322 validation RMSE: 0.319038, time=708.14
+start to train, alpha:0.001603, lambda:0.004000
+after training, sum_rmse:1418233.500000, size:13904602
+start validation
+after validation, sum_rmse:1414118.750000, size:13903855
+iter: 22 training RMSE: 0.31937 validation RMSE: 0.318915, time=719.06
+start to train, alpha:0.001587, lambda:0.004000
+after training, sum_rmse:1417771.000000, size:13904578
+start validation
+after validation, sum_rmse:1414565.375000, size:13905011
+iter: 23 training RMSE: 0.319319 validation RMSE: 0.318952, time=735.39
+start to train, alpha:0.001571, lambda:0.004000
+after training, sum_rmse:1416975.000000, size:13905175
+start validation
+after validation, sum_rmse:1414181.000000, size:13906486
+iter: 24 training RMSE: 0.319222 validation RMSE: 0.318892, time=739.07
+start to train, alpha:0.001556, lambda:0.004000
+after training, sum_rmse:1415686.000000, size:13902063
+start validation
+after validation, sum_rmse:1413506.500000, size:13904039
+iter: 25 training RMSE: 0.319113 validation RMSE: 0.318844, time=738.8
+start to train, alpha:0.001540, lambda:0.004000
+after training, sum_rmse:1416728.125000, size:13906710
+start validation
+after validation, sum_rmse:1413322.500000, size:13902521
+iter: 26 training RMSE: 0.319177 validation RMSE: 0.318841, time=739.16
+start to train, alpha:0.001525, lambda:0.004000
+after training, sum_rmse:1415699.500000, size:13904254
+start validation
+after validation, sum_rmse:1413380.625000, size:13903479
+iter: 27 training RMSE: 0.319089 validation RMSE: 0.318836, time=739.44
+start to train, alpha:0.001509, lambda:0.004000
+after training, sum_rmse:1415931.750000, size:13905134
+start validation
+after validation, sum_rmse:1414043.250000, size:13905179
+iter: 28 training RMSE: 0.319105 validation RMSE: 0.318892, time=711.02
+start to train, alpha:0.001494, lambda:0.004000
+after training, sum_rmse:1415546.875000, size:13903320
+start validation
+after validation, sum_rmse:1413203.375000, size:13903005
+iter: 29 training RMSE: 0.319082 validation RMSE: 0.318822, time=708.7
+start to train, alpha:0.001479, lambda:0.004000
+after training, sum_rmse:1414913.750000, size:13904421
+start validation
+after validation, sum_rmse:1412174.500000, size:13902286
+iter: 30 training RMSE: 0.318998 validation RMSE: 0.318714, time=709.03
+start to train, alpha:0.001465, lambda:0.004000
+after training, sum_rmse:1415439.875000, size:13903848
+start validation
+after validation, sum_rmse:1412518.875000, size:13905310
+iter: 31 training RMSE: 0.319064 validation RMSE: 0.318718, time=709.13
+start to train, alpha:0.001450, lambda:0.004000
+after training, sum_rmse:1414779.750000, size:13905958
+start validation
+after validation, sum_rmse:1413124.250000, size:13905661
+iter: 32 training RMSE: 0.318966 validation RMSE: 0.318782, time=709.15
+start to train, alpha:0.001435, lambda:0.004000
+after training, sum_rmse:1414069.500000, size:13907513
+start validation
+after validation, sum_rmse:1412173.375000, size:13907727
+iter: 33 training RMSE: 0.318868 validation RMSE: 0.318651, time=709.05
+start to train, alpha:0.001421, lambda:0.004000
+after training, sum_rmse:1413827.250000, size:13903207
+start validation
+after validation, sum_rmse:1411735.250000, size:13904433
+iter: 34 training RMSE: 0.31889 validation RMSE: 0.31864, time=709.03
+start to train, alpha:0.001407, lambda:0.004000
+after training, sum_rmse:1414456.375000, size:13905873
+start validation
+after validation, sum_rmse:1412257.250000, size:13906308
+iter: 35 training RMSE: 0.31893 validation RMSE: 0.318677, time=708.7
+start to train, alpha:0.001393, lambda:0.004000
+after training, sum_rmse:1414026.375000, size:13905895
+start validation
+after validation, sum_rmse:1410905.875000, size:13903474
+iter: 36 training RMSE: 0.318881 validation RMSE: 0.318557, time=709.01
+start to train, alpha:0.001379, lambda:0.004000
+after training, sum_rmse:1413470.125000, size:13904874
+start validation
+after validation, sum_rmse:1410649.125000, size:13904994
+iter: 37 training RMSE: 0.31883 validation RMSE: 0.318511, time=709.1
+start to train, alpha:0.001365, lambda:0.004000
+after training, sum_rmse:1413051.875000, size:13903601
+start validation
+after validation, sum_rmse:1410664.500000, size:13905730
+iter: 38 training RMSE: 0.318798 validation RMSE: 0.318504, time=708.84
+start to train, alpha:0.001351, lambda:0.004000
+after training, sum_rmse:1413245.000000, size:13905195
+start validation
+after validation, sum_rmse:1410868.500000, size:13904848
+iter: 39 training RMSE: 0.318801 validation RMSE: 0.318537, time=708.94
+start to train, alpha:0.001338, lambda:0.004000
+after training, sum_rmse:1413342.000000, size:13906085
+start validation
+after validation, sum_rmse:1410522.250000, size:13904860
+iter: 40 training RMSE: 0.318802 validation RMSE: 0.318498, time=709.02
+start to train, alpha:0.001325, lambda:0.004000
+after training, sum_rmse:1412657.500000, size:13906334
+start validation
+after validation, sum_rmse:1410903.125000, size:13905808
+iter: 41 training RMSE: 0.318722 validation RMSE: 0.31853, time=725.16
+start to train, alpha:0.001311, lambda:0.004000
+after training, sum_rmse:1413529.375000, size:13906108
+start validation
+after validation, sum_rmse:1410301.875000, size:13902800
+iter: 42 training RMSE: 0.318823 validation RMSE: 0.318497, time=739.55
+start to train, alpha:0.001298, lambda:0.004000
+after training, sum_rmse:1412269.000000, size:13904971
+start validation
+after validation, sum_rmse:1409847.250000, size:13905483
+iter: 43 training RMSE: 0.318694 validation RMSE: 0.318415, time=723.6
+start to train, alpha:0.001285, lambda:0.004000
+after training, sum_rmse:1412574.875000, size:13906531
+start validation
+after validation, sum_rmse:1410160.125000, size:13901603
+iter: 44 training RMSE: 0.31871 validation RMSE: 0.318494, time=711.12
+start to train, alpha:0.001272, lambda:0.004000
+after training, sum_rmse:1412331.625000, size:13902518
+start validation
+after validation, sum_rmse:1410654.500000, size:13905903
+iter: 45 training RMSE: 0.318729 validation RMSE: 0.318501, time=713.7
+start to train, alpha:0.001260, lambda:0.004000
+after training, sum_rmse:1411505.500000, size:13905366
+start validation
+after validation, sum_rmse:1409583.500000, size:13903921
+iter: 46 training RMSE: 0.318603 validation RMSE: 0.318403, time=713.69
+start to train, alpha:0.001247, lambda:0.004000
+after training, sum_rmse:1411067.000000, size:13905230
+start validation
+after validation, sum_rmse:1410249.125000, size:13906267
+iter: 47 training RMSE: 0.318555 validation RMSE: 0.318451, time=713.67
+start to train, alpha:0.001235, lambda:0.004000
+after training, sum_rmse:1410728.375000, size:13903814
+start validation
+after validation, sum_rmse:1409545.375000, size:13902179
+iter: 48 training RMSE: 0.318533 validation RMSE: 0.318418, time=713.68
+start to train, alpha:0.001222, lambda:0.004000
+after training, sum_rmse:1410751.625000, size:13904735
+start validation
+after validation, sum_rmse:1409064.625000, size:13905012
+iter: 49 training RMSE: 0.318525 validation RMSE: 0.318332, time=713.61
+start to train, alpha:0.001210, lambda:0.004000
+after training, sum_rmse:1410924.250000, size:13904619
+start validation
+after validation, sum_rmse:1409364.125000, size:13904644
+iter: 50 training RMSE: 0.318546 validation RMSE: 0.31837, time=713.62
+start to train, alpha:0.001198, lambda:0.004000
+after training, sum_rmse:1410985.500000, size:13903860
+start validation
+after validation, sum_rmse:1409539.000000, size:13902454
+iter: 51 training RMSE: 0.318562 validation RMSE: 0.318414, time=713.6
+start to train, alpha:0.001186, lambda:0.004000
+after training, sum_rmse:1411416.250000, size:13904426
+start validation
+after validation, sum_rmse:1408045.000000, size:13904588
+iter: 52 training RMSE: 0.318604 validation RMSE: 0.318221, time=713.65
+start to train, alpha:0.001174, lambda:0.004000
+after training, sum_rmse:1410575.250000, size:13905240
+start validation
+after validation, sum_rmse:1408515.000000, size:13903314
+iter: 53 training RMSE: 0.3185 validation RMSE: 0.318289, time=713.56
+start to train, alpha:0.001162, lambda:0.004000
+after training, sum_rmse:1410368.625000, size:13903923
+start validation
+after validation, sum_rmse:1407877.625000, size:13904934
+iter: 54 training RMSE: 0.318491 validation RMSE: 0.318198, time=713.65
+start to train, alpha:0.001151, lambda:0.004000
+after training, sum_rmse:1410328.500000, size:13904721
+start validation
+after validation, sum_rmse:1409311.500000, size:13906421
+iter: 55 training RMSE: 0.318478 validation RMSE: 0.318343, time=713.69
+start to train, alpha:0.001139, lambda:0.004000
+after training, sum_rmse:1409616.500000, size:13902885
+start validation
+after validation, sum_rmse:1407894.500000, size:13906458
+iter: 56 training RMSE: 0.318418 validation RMSE: 0.318183, time=713.44
+start to train, alpha:0.001128, lambda:0.004000
+after training, sum_rmse:1410398.125000, size:13905384
+start validation
+after validation, sum_rmse:1407188.125000, size:13904985
+iter: 57 training RMSE: 0.318478 validation RMSE: 0.31812, time=713.58
+start to train, alpha:0.001117, lambda:0.004000
+after training, sum_rmse:1409756.000000, size:13904340
+start validation
+after validation, sum_rmse:1408478.000000, size:13903573
+iter: 58 training RMSE: 0.318417 validation RMSE: 0.318282, time=713.64
+start to train, alpha:0.001105, lambda:0.004000
+after training, sum_rmse:1409291.625000, size:13904849
+start validation
+after validation, sum_rmse:1408374.500000, size:13906087
+iter: 59 training RMSE: 0.318359 validation RMSE: 0.318241, time=713.75
+gradient descent is finished
+start to test
+processed 100000 lines
+processed 200000 lines
+processed 300000 lines
+processed 400000 lines
+processed 500000 lines
+processed 600000 lines
+processed 700000 lines
+processed 800000 lines
+processed 900000 lines
+processed 1000000 lines
+processed 1100000 lines
+processed 1200000 lines
+processed 1300000 lines
+  adding: sample1.txt (deflated 78%)
